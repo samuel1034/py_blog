@@ -10,3 +10,6 @@ class Post (models.Model):
     content = RichTextUploadingField()
     author = models.ForeignKey(django.contrib.auth.models.User, on_delete=models.PROTECT)
     created_at = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
